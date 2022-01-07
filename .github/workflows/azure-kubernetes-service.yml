@@ -48,6 +48,6 @@ jobs:
       with:
         azcliversion: 2.29.1
         inlineScript: |
-          az configure --defaults acr=${{ env.acrskdemo }}
-          az acr build -t  -t ${{ env.acrskdemo }}.azurecr.io/${{ env.demoapp }}:${{ github.sha }}
+          az configure --defaults acr=acrskdemo
+          az acr build -t  -t acrskdemo.azurecr.io/demoapp:${{ github.sha }}
   
